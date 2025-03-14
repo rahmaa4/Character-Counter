@@ -2,6 +2,11 @@
 
 /* Initialise theme variables - custom utilities */
 
+@font-face{
+    font-family: 'DM Sans';
+    src: url('/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf'), format('truetype')
+}
+
 @theme {
     --color-neutral900: #12131A;
     --color-neutral800: #21222c;
@@ -15,5 +20,24 @@
     --color-orange500: #ff9f00;
     --color-red500: #fe8159;
     --color-red800: #da3701;
+    --font-primary: 'DM Sans', sans-serif
+}
+
+@layer base{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: transparent;
+        font-family: var(--font-primary) ;
+        font-size: var(--text-base);
+        text-decoration: none;
+        list-style: none;
+        border: none;
+    }
+
+    html, body, #root{
+        min-height: 100dvh;
+    }
 }
 
