@@ -1,0 +1,40 @@
+{
+    "facts": [
+      {
+        "subject": "English",
+        "title": "Set for Success!",
+        "fact": "The word 'set' has the most definitions of any word in the English language, with over 430 different meanings listed in the Oxford English Dictionary."
+      },
+      {
+        "subject": "Maths",
+        "title": "Pi in the Sky!",
+        "fact": "The number pi (π) is an irrational number, meaning its decimal form goes on forever without repeating, and it's been calculated to over 50 trillion digits!"
+      },
+      {
+        "subject": "Science",
+        "title": "Bee-ing Busy!",
+        "fact": "A single teaspoon of honey represents the life work of 12 bees. It takes a bee its entire life to make just one-twelfth of a teaspoon of honey."
+      },
+      {
+        "subject": "History",
+        "title": "A War That Didn’t Last Long!",
+        "fact": "The shortest war in history was between Britain and Zanzibar on August 27, 1896. Zanzibar surrendered after 38 minutes!"
+      },
+      {
+        "subject": "Geography",
+        "title": "Time Zone Overload!",
+        "fact": "Russia is so large that it spans across 11 time zones, more than any other country in the world."
+      },
+      {
+        "subject": "Art",
+        "title": "A Priceless Heist!",
+        "fact": "The famous 'Mona Lisa' painting by Leonardo da Vinci is considered priceless, but it was once stolen from the Louvre Museum in 1911 and recovered two years later."
+      },
+      {
+        "subject": "Physical Education",
+        "title": "Hoola What?!",
+        "fact": "The longest recorded time someone has been hula-hooping is 74 hours! That’s over 3 days straight of continuous spinning."
+      }
+    ]
+  }
+  

@@ -20,7 +20,7 @@
     --color-orange500: #ff9f00;
     --color-red500: #fe8159;
     --color-red800: #da3701;
-    --font-primary: 'DM Sans', sans-serif
+    --font-primary: 'DM Sans', sans-serif;
 }
 
 @layer base{
@@ -31,6 +31,7 @@
         background: transparent;
         font-family: var(--font-primary) ;
         font-size: var(--text-base);
+        letter-spacing: var(--tracking-tighter);
         text-decoration: none;
         list-style: none;
         border: none;
@@ -38,6 +39,39 @@
 
     html, body, #root{
         min-height: 100dvh;
+    }
+}
+
+@layer components {
+    .backgroundLight {
+        background-color: #ffffff;
+        background-image: radial-gradient(rgba(18, 19, 26, 0.2) 0.65px, #ffffff 0.65px);
+        background-size: 13px 13px;
+    }
+
+    .backgroundDark {
+        background-color: #12131a;
+        background-image: radial-gradient(#f2f2f71f 0.65px, #12131a 0.65px);
+        background-size: 13px 13px;
+    }
+
+    .boxShadowDarkButton{
+        box-shadow: 1px 2px var(--color-neutral100);
+    }
+
+    .boxShadowLightButton {
+        border: 1px solid #12131a;
+        box-shadow: 2px 3px var(--color-neutral900);
+    }
+
+    .boxShadowModalLight {
+        border: 1px solid #12131a;
+        box-shadow: 5px 4px var(--color-neutral900);
+    }
+
+    .boxShadowModalDark{
+        border: 1px solid var(--color-neutral100);
+        box-shadow: 5px 4px var(--color-neutral100);
     }
 }
 
