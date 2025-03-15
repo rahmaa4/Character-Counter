@@ -15,7 +15,7 @@ export default function SubjectButton({ subject, fact, title }: SubjectButtonPro
 
     return (
         <>
-            <button onClick={() => setIsDisplayFact((prev) => !prev)} className={`text-sm px-4 py-1 rounded mx-1 h-fit self-center 
+            <button onClick={() => setIsDisplayFact((prev) => !prev)} className={`text-sm px-4 py-1 rounded mx-1 h-fit self-center hover:cursor-pointer
                     justify-self-center ${isLight? 'bg-neutral100  text-neutral900 boxShadowLightButton': 'bg-neutral700  text-neutral200  boxShadowDarkButton'}`}>{subject}
             </button>
             <FactModal subject={subject} fact={fact} title={title} isDisplayFact={isDisplayFact} setIsDisplayFact={setIsDisplayFact}  />
