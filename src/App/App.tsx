@@ -1,9 +1,10 @@
 import { useContext, useEffect } from "react";
-import Nav from "../Components/Nav/Nav";
 import { ThemeContext } from "../Contexts/Theme/ThemeContext";
-import FunFact from "../Components/FunFact/FunFact";
+import Nav from "../Components/Nav/Nav";
 import Title from "../Components/Title/Title";
-
+import FunFact from "../Components/FunFact/FunFact";
+import UserTextField from "../Components/UserTextField/UserTextField";
+import FilterOptions from "../Components/FilterOptions/FilterOptions";
 
 export default function App() {
     const { isLight } = useContext(ThemeContext);  
@@ -25,7 +26,10 @@ export default function App() {
     return (
         <>
             <Nav />
-            <Title/>
+            <Title />
+            <FunFact />
+            <UserTextField />
+            <FilterOptions/>
         </>
     )
 }
