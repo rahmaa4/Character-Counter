@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { IsExcludeSpacesContext } from "../../../Contexts/IsExcludeSpaces/IsExcludeSpacesContext";
+import { useContext } from 'react';
 import { WordCountContext } from "../../../Contexts/WordCount/WordCountContext";
 
 const charCountPattern ='/assets/images/pattern-character-count.svg';
@@ -8,15 +7,13 @@ const sentenceCountPattern ='/assets/images/pattern-sentence-count.svg';
 
 type CountCardProp = {
     type: 'char-count' | 'word-count' | 'sentence-count',
-    userInput: string
+    charCount?: number,
+    sentenceCount?: number
 }
 
-export default function CountCard({ type, userInput }: CountCardProp) {
-    const { isExcludeSpaces } = useContext(IsExcludeSpacesContext);
-    const {wordCount, setWordCount}= useContext(WordCountContext)
-    const [charCount, setCharCount] = useState(0);
-    const [sentenceCount, setSentenceCount] = useState(0);
-
+export default function CountCard({ type, charCount, sentenceCount }: CountCardProp) {
+    const {wordCount}= useContext(WordCountContext)
+   
     let bgColor;
     let label;
     let bgImage;
@@ -41,36 +38,6 @@ export default function CountCard({ type, userInput }: CountCardProp) {
             }
     }
 
-
-    const calculateScores = (userInput:string) => {
-        let totalChars = 0;
-        let totalWords = 0;
-        let totalSentences = 0;
-        for (let i = 0; i < userInput.length; i++) {
-            if (isExcludeSpaces) {
-                if (userInput[i] !== ' ') {
-                    totalChars++;
-                }
-            } else {
-                totalChars++
-                if (userInput[i] === ' ') {
-                    totalWords++;
-                }
-                if (userInput[i] === '.') {
-                    totalSentences++;
-                }
-            }
-        }
-        setCharCount(totalChars);
-        setWordCount(totalWords);
-        setSentenceCount(totalSentences);
-    }
-
-
-
-    useEffect(() => {
-        calculateScores(userInput);
-    }, [userInput])
 
 
    
