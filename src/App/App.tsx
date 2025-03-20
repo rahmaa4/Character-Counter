@@ -71,7 +71,7 @@ export default function App() {
             <Nav />
             <Title />
             <FunFact />
-            <UserTextField setUserInput={setUserInput} charLimit={charLimit} />
+            <UserTextField setUserInput={setUserInput} charLimit={charLimit} charCount={charCount} />
             <FilterOptions setCharLimit={setCharLimit} />
             <div className={`flex flex-col gap-8 mt-8`}>
                 <CountCard type={'char-count'} charCount={charCount} />

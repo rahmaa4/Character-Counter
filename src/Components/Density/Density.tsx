@@ -18,8 +18,8 @@ export default function Density({userInput, charCount}: {userInput: string; char
 useEffect(() => {
   let letterDensity = { ...initialAlphabetObject.current };
   for (let i = 0; i < userInput.length; i++) {
-    let currentChar = userInput[i];
-    if (lettersInAlphabet.includes(currentChar)) {
+    let currentChar = userInput[i].toLowerCase();
+    if (currentChar && lettersInAlphabet.includes(currentChar)) {
       letterDensity[currentChar] = (letterDensity[currentChar] || 0) + 1;
     }
   }
@@ -57,11 +57,10 @@ useEffect(() => {
         }
       })}
       <div className={`flex items-center mb-2`} onClick={() => setIsSeeMore((prev) => !prev)}>
-        <button className={`pr-2 text-lg font-medium`}>{isSeeMore? 'See Less': 'See More'}</button>
-        <img src={isLight ? downChevronLightTheme : downChevronDarkTheme} alt="chveron icon" className={`${isSeeMore? 'rotate-180' : null}`} />
+        <button className={`pr-2 text-lg font-medium`}>{isSeeMore && userInput.length > 0? 'See Less': 'See More'}</button>
+        <img src={isLight ? downChevronLightTheme : downChevronDarkTheme} alt="chveron icon" className={`${isSeeMore && userInput.length > 0? 'rotate-180' : null}`} />
       </div>
-      <div className={`${isSeeMore? 'block' : 'hidden'}`}>
-      </div>
+      <p className={`${userInput.length > 0 ? 'hidden' : 'block'} text-sm`}>No characters found. Start typing to see letter density.</p>
     </div>
   );
 }

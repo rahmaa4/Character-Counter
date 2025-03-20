@@ -1,4 +1,4 @@
-import { useContext} from "react"
+import { useContext, useEffect} from "react"
 import { IsCharLimitContext } from "../../../Contexts/IsCharLimit/IsCharLimitContext"
 import { IsExcludeSpacesContext } from "../../../Contexts/IsExcludeSpaces/IsExcludeSpacesContext";
 
@@ -7,7 +7,7 @@ const iconCheck = 'assets/images/icon-check.svg';
 
 type CheckBoxProp = {
     type: 'is-exclude-spaces' | 'is-char-limit',
-    setCharLimit? : React.Dispatch<React.SetStateAction<number>>
+    setCharLimit?: React.Dispatch<React.SetStateAction<number>>
 }
 
 
@@ -22,6 +22,12 @@ export default function CheckBox({type, setCharLimit}: CheckBoxProp) {
             setIsCharLimit((prev) => !prev);
         }
     }
+
+    useEffect(() => {
+        if (!isCharLimit) {
+           setCharLimit && setCharLimit(Infinity);
+        }
+    }, [isCharLimit]) 
 
     const handleSetCharLimit = ({target}: React.ChangeEvent<HTMLInputElement> ) => {
         setCharLimit && setCharLimit(Number(target.value));
