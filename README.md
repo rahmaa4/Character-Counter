@@ -5,7 +5,8 @@ This App is a clean, simple yet interactive tool designed to help students manag
 The playful, vibrant and modern design along with an additional fun-fact feature, helps to enhance engagment. 
 #### Tech Stack :
 + Tailwind CSS
-+ Javascript
++ Typescript
++ HTML
 + React (Context API, Hooks)
 
 
