@@ -60,7 +60,6 @@ export default function App() {
     }
 
 
-
     useEffect(() => {
         calculateScores(userInput);
     }, [userInput])
@@ -72,13 +71,13 @@ export default function App() {
             <Title />
             <FunFact />
             <UserTextField setUserInput={setUserInput} charLimit={charLimit} charCount={charCount} />
-            <FilterOptions setCharLimit={setCharLimit} />
-            <div className={`flex flex-col gap-8 mt-8`}>
+            <FilterOptions setCharLimit={setCharLimit} /> 
+            <div className={`flex flex-col gap-8 mt-8 md:flex-row md:gap-[16px] lg:w-[85vw] mx-auto`}>
                 <CountCard type={'char-count'} charCount={charCount} />
                 <CountCard type={'word-count'} />
                 <CountCard type={'sentence-count'} sentenceCount={sentenceCount} />
             </div>
-            <div className={`mt-8 w-[90vw] mx-auto ${isLight? 'text-neutral900' : 'text-neutral200'}`}>
+            <div className={`mt-8 w-[90vw] mx-auto ${isLight? 'text-neutral900' : 'text-neutral200'} lg:w-[55vw]`}>
                 <h2 className={`mb-3 text-xl font-medium`}>Letter Density</h2>
                 <Density userInput={userInput} charCount={charCount} /> 
             </div>

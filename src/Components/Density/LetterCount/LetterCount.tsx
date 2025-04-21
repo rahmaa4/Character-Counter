@@ -12,8 +12,8 @@ export default function LetterCount({ letter, count, charCount }: LetterCountPro
     useEffect(() => { setPercentage((count / charCount) * 100) }, [charCount]);
     return (
         <div className={`flex items-center justify-between gap-2 mb-2`}>
-            <p className={`uppercase w-[16px]`}>{letter}</p>
-            <div className={`w-[212px]`} >
+            <div className={`flex items-center gap-2 w-full`} >
+                <p className={`uppercase w-[16px]`}>{letter}</p>
                 <div className={`relative w-full ${isLight ? 'bg-neutral200' : 'bg-neutral700'} h-[13px] rounded-xl`}>
                     <div style={{width: `${percentage}%`}} className={`bg-purple400 absolute h-full rounded-xl`}></div>
                 </div>

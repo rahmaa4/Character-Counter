@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext} from "react";
 import { ThemeContext } from "../../../Contexts/Theme/ThemeContext";
 
 const bulb = 'assets/images/bulb.svg';
@@ -18,8 +18,10 @@ export default function FactModal({ subject, fact, title, isDisplayFact, setIsDi
     const { isLight } = useContext(ThemeContext);
 
     return (
-        <div className={`${isDisplayFact ? 'fixed' : 'hidden'} h-screen w-full right-0 left-0 flex items-center justify-center backdrop-blur-xs `}>
-            <div className={`relative w-[75vw] aspect-[2/1] modalBox px-3 py-2 z-[10] ${isLight? 'backgroundLight text-neutral900 boxShadowModalLight': 'backgroundDark text-neutral200 boxShadowModalDark'}`}>
+        <div className={`${isDisplayFact ? 'fixed' : 'hidden'} h-screen w-full right-0 left-0 bottom-0 flex items-center justify-center backdrop-blur-xs z-10 `}>
+            <div className={`relative w-[75vw] aspect-[2/1] modalBox px-3 py-2 z-[10] ${isLight ? 'backgroundLight text-neutral900 boxShadowModalLight' : 'backgroundDark text-neutral200 boxShadowModalDark'}
+            md:w-[50vw] lg:w-[20vw] `}>
+            
                 <div className={`flex justify-between items-center mb-2`}>
                     <p className={`text-sm border rounded-sm w-fit px-1 h-fit `}>{subject}</p>
                     <button onClick={() => setIsDisplayFact((prev) => !prev)} className={`flex items-center gap-2 text-sm hover:cursor-pointer`}>back<img src={isLight? iconBackArrowLight : iconBackArrowDark} alt='back arrow' className={`w-[9px] aspect-square`} /></button>

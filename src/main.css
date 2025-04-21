@@ -21,6 +21,7 @@
     --color-red500: #fe8159;
     --color-red800: #da3701;
     --font-primary: 'DM Sans', sans-serif;
+    --breakpoint-mobileLg: 575px;
 }
 
 @layer base{
@@ -72,6 +73,14 @@
     .boxShadowModalDark{
         border: 1px solid var(--color-neutral100);
         box-shadow: 5px 4px var(--color-neutral100);
+    }
+
+    .responMobileLg {
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: var(--gap-x-5); 
+        margin: 16px 0px;
     }
 }
 

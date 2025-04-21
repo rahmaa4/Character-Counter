@@ -27,7 +27,7 @@ export default function FilterOptions({setCharLimit}: {setCharLimit: React.Dispa
 
 
     return (
-        <div className={`mt-2 w-[90vw] mx-auto flex flex-col gap-2 ${isLight? 'text-neutral900' : 'text-neutral200'}`}>
+        <div className={`mt-2 w-[90vw] mx-auto flex flex-col gap-2 ${isLight? 'text-neutral900' : 'text-neutral200'} md:w-[75vw] lg:w-[45vw]`}>
             <div className={`flex flex-col gap-2`}>
                 <CheckBox type='is-exclude-spaces' />
                 <CheckBox type='is-char-limit' setCharLimit={setCharLimit} />

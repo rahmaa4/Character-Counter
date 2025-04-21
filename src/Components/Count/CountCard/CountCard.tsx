@@ -42,9 +42,9 @@ export default function CountCard({ type, charCount, sentenceCount }: CountCardP
 
    
     return (
-        <div style={{ backgroundImage: `url(${bgImage})`}} className={`rounded-xl w-[85vw] ${bgColor} ml-5 h-[150px] bg-no-repeat bg-right flex flex-col justify-end p-4`}>
-            <h2 className={`text-2xl font-semibold`}>{type === 'char-count' ? charCount : type === 'word-count' ? wordCount : type === 'sentence-count' ? sentenceCount : null}</h2>
-            <p className={`capitalize font-md text-lg`}>{label}</p>
+        <div style={{ backgroundImage: `url(${bgImage})`}} className={`rounded-xl w-[85vw] ${bgColor} ml-5 h-[150px] md:h-[185px] bg-no-repeat bg-right flex flex-col justify-end p-4`}>
+            <h2 className={`text-2xl font-semibold lg:text-3xl`}>{type === 'char-count' ? charCount : type === 'word-count' ? wordCount : type === 'sentence-count' ? sentenceCount : null}</h2>
+            <p className={`capitalize font-md text-lg lg:text-xl`}>{label}</p>
         </div>
     )
 }

@@ -57,7 +57,7 @@ useEffect(() => {
         }
       })}
       <div className={`flex items-center mb-2`} onClick={() => setIsSeeMore((prev) => !prev)}>
-        <button className={`pr-2 text-lg font-medium`}>{isSeeMore && userInput.length > 0? 'See Less': 'See More'}</button>
+        <button className={`pr-2 text-lg font-medium hover:cursor-pointer`}>{isSeeMore && userInput.length > 0? 'See Less': 'See More'}</button>
         <img src={isLight ? downChevronLightTheme : downChevronDarkTheme} alt="chveron icon" className={`${isSeeMore && userInput.length > 0? 'rotate-180' : null}`} />
       </div>
       <p className={`${userInput.length > 0 ? 'hidden' : 'block'} text-sm`}>No characters found. Start typing to see letter density.</p>
