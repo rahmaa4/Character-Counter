@@ -27,7 +27,7 @@ export default function UserTextField({setUserInput, charLimit, charCount} : Use
         md:mt-10 md:w-[75vw] min-h-[185px] lg:w-[45vw] lg:min-h-[230px]`}
                 placeholder="Start typing here...(or paste your text)">
             </textarea>
-            <div className={`w-[92vw] mx-auto mb-3 flex items-center gap-1 ${(charCount >= charLimit) && isCharLimit? 'block': 'hidden'}  md:w-[75vw]`}>
+            <div className={`w-[92vw] mx-auto mb-3 flex items-center gap-1 ${(charCount >= charLimit) && isCharLimit? 'block': 'hidden'}  md:w-[75vw] lg:w-[45vw]`}>
                 <img src={errorIcon} alt="error icon" />
                 <p className={`text-xs text-red800`}>Limit Reached! Your text cannot exceed {charLimit} characters</p>
             </div>
