@@ -40,21 +40,17 @@ export default function App() {
         let totalWords = 0;
         let totalSentences = 0;
         for (let i = 0; i < userInput.length; i++) {
+            if (isExcludeSpaces) {
+                continue;
+            }
+            totalChars++;
             if (userInput[i] === ".") {
-                totalChars++;
                 totalSentences++;
             }
             if (userInput[i] === " ") {
-                totalWords++;
-                if (!isExcludeSpaces) {//thus include space count
-                    totalChars++;
-                } else {//exclude spaces is true
-                    continue;
-                }  
+                totalWords++; 
             }
-            if (userInput[i] !== "." || userInput[i] !== " ") {
-                totalChars++;
-            }
+            
         }
         setCharCount(totalChars);
         setWordCount(totalWords);
